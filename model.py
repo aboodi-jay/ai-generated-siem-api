@@ -41,4 +41,4 @@ pipeline.fit(X, y)
 def predict_log(input_json):
     sample = pd.DataFrame([input_json])
     prediction = pipeline.predict(sample)
-    return "real threat" if prediction[0] == 1 else "false positive"
+    return "false positive" if prediction[0] == 1 else "real threat"
